@@ -1,0 +1,12 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
+script:
+  - make
+  - docker images
+  - make run
+  - docker ps -a
